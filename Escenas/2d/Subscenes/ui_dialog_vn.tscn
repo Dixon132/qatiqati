@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://h4p0ot67360w"]
+[gd_scene format=3 uid="uid://h4p0ot67360w"]
 
 [node name="UI_DialogVN" type="CanvasLayer"]
 
@@ -10,7 +10,7 @@ offset_left = 250.0
 offset_top = 458.0
 offset_right = 290.0
 offset_bottom = 481.0
-text = "???"
+text = "e"
 
 [node name="Texto" type="Label" parent="."]
 offset_left = 250.0

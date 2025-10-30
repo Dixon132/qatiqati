@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://g5px5q2f88aq"]
+[gd_scene load_steps=12 format=3 uid="uid://g5px5q2f88aq"]
 
 [ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_2xdta"]
 [ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="1_7q4ex"]
@@ -14,6 +14,17 @@ size = Vector2(3040, 212)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ulm5"]
 size = Vector2(46, 711)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ulm5"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0.25, 1, 1)
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+spread = 180.0
+gravity = Vector3(0, 900, 0)
+scale_min = 0.0
+scale_max = 5.8799996
 
 [node name="Pueblo" type="Node2D"]
 position = Vector2(376, -168)
@@ -70,15 +81,28 @@ position = Vector2(1016, 689)
 
 [node name="UI_DialogoVN" parent="." instance=ExtResource("8_1m1tm")]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Limite" type="ColorRect" parent="."]
 offset_left = -1481.0
 offset_top = 22.0
 offset_right = -1441.0
 offset_bottom = 720.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ColorRect"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Limite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite/StaticBody2D"]
+position = Vector2(16, 347)
+shape = SubResource("RectangleShape2D_7ulm5")
+
+[node name="Limite" type="ColorRect" parent="Limite"]
+layout_mode = 0
+offset_left = 3825.0
+offset_top = 22.0
+offset_right = 3865.0
+offset_bottom = 720.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limite/Limite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite/Limite/StaticBody2D"]
 position = Vector2(16, 347)
 shape = SubResource("RectangleShape2D_7ulm5")
 
@@ -86,3 +110,12 @@ shape = SubResource("RectangleShape2D_7ulm5")
 position = Vector2(419.00003, 488)
 scale = Vector2(2.0845683, 2.569847)
 texture = ExtResource("9_p0e3k")
+
+[node name="Lluvia" type="GPUParticles2D" parent="."]
+z_index = 2
+position = Vector2(330, 72.99997)
+scale = Vector2(8920.979, 23.50786)
+amount = 500
+lifetime = 5.0
+preprocess = 2.0
+process_material = SubResource("ParticleProcessMaterial_7ulm5")
