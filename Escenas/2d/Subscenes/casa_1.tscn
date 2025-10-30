@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfcxgejwuxnnp"]
 
-[ext_resource type="Script" uid="uid://bpifc0qiilyyv" path="res://Scripts/casa_1.gd" id="1_onmj4"]
+[ext_resource type="Script" uid="uid://jvd0c7j761s2" path="res://Scripts/2d/casa_1.gd" id="1_onmj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xip1y"]
 size = Vector2(32, 64)
@@ -13,6 +13,7 @@ offset_left = -64.0
 offset_top = -64.0
 offset_right = 72.0
 offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Area" type="Area2D" parent="."]
 position = Vector2(0, 32)
@@ -26,6 +27,7 @@ offset_top = -56.0
 offset_right = 24.0
 offset_bottom = -16.0
 color = Color(1, 0.92156863, 0.5411765, 1)
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_area_body_exited"]

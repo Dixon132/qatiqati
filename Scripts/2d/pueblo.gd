@@ -1,9 +1,5 @@
 extends Node2D
 
-# ----------------------------
-# 🔹 Referencias a la interfaz
-# ----------------------------
-
 @onready var dialog_box = $UI/DialogBox
 @onready var dialog_text = $UI/DialogBox/DialogText
 
