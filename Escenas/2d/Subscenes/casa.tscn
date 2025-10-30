@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://7xggfg8ts3c3"]
+[gd_scene load_steps=16 format=3 uid="uid://cv3jvbhc7ybmt"]
 
 [ext_resource type="PackedScene" uid="uid://bxo2vt35hqphs" path="res://Assets/Models/casa.glb" id="1_voeui"]
 [ext_resource type="Script" uid="uid://bt74dybuxvi6i" path="res://Scripts/InteractionDoor.gd" id="2_0mgcb"]
