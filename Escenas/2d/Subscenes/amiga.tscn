@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwqlsmvr0r11k"]
 
-[ext_resource type="Script" uid="uid://c6yrc60gp58nu" path="res://Scripts/amiga.gd" id="1_colvh"]
-[ext_resource type="Texture2D" uid="uid://cyrwd4uewm5fw" path="res://icon.svg" id="2_5l3wo"]
+[ext_resource type="Script" uid="uid://u2gmtj7g6g31" path="res://Scripts/2d/amiga.gd" id="1_colvh"]
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="2_5l3wo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1ots"]
 size = Vector2(34, 42)
@@ -10,10 +10,10 @@ size = Vector2(34, 42)
 script = ExtResource("1_colvh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-56, 348)
+position = Vector2(-56, 452)
 scale = Vector2(0.25, 0.3125)
 texture = ExtResource("2_5l3wo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-57, 347)
+position = Vector2(-57, 451)
 shape = SubResource("RectangleShape2D_m1ots")
