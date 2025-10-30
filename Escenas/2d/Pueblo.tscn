@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://g5px5q2f88aq"]
+
+[ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_2xdta"]
+[ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="1_7q4ex"]
+[ext_resource type="PackedScene" uid="uid://bwqlsmvr0r11k" path="res://Escenas/2d/Subscenes/amiga.tscn" id="2_irf0q"]
+[ext_resource type="PackedScene" uid="uid://dfcxgejwuxnnp" path="res://Escenas/2d/Subscenes/casa_1.tscn" id="3_pa0an"]
+[ext_resource type="PackedScene" uid="uid://bke5tfsbryouy" path="res://Escenas/2d/Subscenes/ui.tscn" id="4_liocs"]
+[ext_resource type="Script" uid="uid://u2gmtj7g6g31" path="res://Scripts/2d/amiga.gd" id="5_h620h"]
+[ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="6_0t2hh"]
+[ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="8_1m1tm"]
+[ext_resource type="Script" uid="uid://jvd0c7j761s2" path="res://Scripts/2d/casa_1.gd" id="8_6obcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e3k"]
+
+[node name="Pueblo" type="Node2D"]
+position = Vector2(376, -168)
+script = ExtResource("1_2xdta")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+
+[node name="Suelo" type="ColorRect" parent="."]
+offset_left = -968.0
+offset_top = 608.0
+offset_right = 2080.0
+offset_bottom = 813.0
+color = Color(0.37892416, 0.32476085, 0.16728255, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Suelo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/StaticBody2D"]
+shape = SubResource("RectangleShape2D_p0e3k")
+
+[node name="Jugador" parent="." instance=ExtResource("1_7q4ex")]
+position = Vector2(-200, 184)
+
+[node name="Amiga" parent="." instance=ExtResource("2_irf0q")]
+position = Vector2(-192, 240)
+script = ExtResource("5_h620h")
+
+[node name="UI" parent="." instance=ExtResource("4_liocs")]
+
+[node name="Casa1" parent="." instance=ExtResource("3_pa0an")]
+position = Vector2(112, 536)
+script = ExtResource("8_6obcq")
+
+[node name="Casa2" parent="." instance=ExtResource("3_pa0an")]
+position = Vector2(-64, 536)
+script = null
+
+[node name="Casa3" parent="." instance=ExtResource("3_pa0an")]
+position = Vector2(312, 544)
+script = null
+
+[node name="Ambiente" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0)
+
+[node name="CasaFinal" parent="." instance=ExtResource("6_0t2hh")]
+position = Vector2(1016, 592)
+
+[node name="UI_DialogoVN" parent="." instance=ExtResource("8_1m1tm")]
