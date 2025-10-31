@@ -23,5 +23,13 @@ shape = SubResource("RectangleShape2D_13wfd")
 [node name="Puerta" type="StaticBody2D" parent="."]
 position = Vector2(16, -48)
 
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 2
+offset_top = -163.0
+offset_right = 110.0
+offset_bottom = -140.0
+text = "E - Interactuar"
+
 [connection signal="body_entered" from="AreaInteraccion" to="." method="_on_area_interaccion_body_entered"]
 [connection signal="body_exited" from="AreaInteraccion" to="." method="_on_area_interaccion_body_exited"]

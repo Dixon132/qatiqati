@@ -84,10 +84,6 @@ position = Vector2(375, 709)
 [node name="Casa3" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(-158, 709)
 
-[node name="Casa2" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(-1178, 661)
-dialogo_hombre = Array[String](["Hola negro", "¿Estás sola? Está muy tarde para andar caminando.", "¿Dijiste que buscas a tu amiga?...", "Sí, la vi. Pasó corriendo por aquí, estaba mojada por la lluvia.", "Si quieres, puedes entrar. Tal vez siga adentro... ven."])
-
 [node name="Casa1" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(108, 709)
 dialogo_hombre = Array[String](["No puedo creer que nos hayan mandado a hacer esta tarea", "Si, la verdad da flojera venir hasta aqui solo por una leyenda", "Mejor acabemos rapido con la investigación para irnos a casa", "Si, vamos..."])
