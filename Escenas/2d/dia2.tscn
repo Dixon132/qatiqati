@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://frgk5tqaomoh"]
+
+[ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_rnes4"]
+[ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="2_8x0ke"]
+[ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="4_72lcd"]
+[ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="5_dhnbi"]
+[ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="6_fwjxe"]
+[ext_resource type="Texture2D" uid="uid://b0dxg111b4v2j" path="res://Assets/Texturas/SpriteFondoPueblo/fondofinal2.png" id="7_mlh7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lbbo"]
+size = Vector2(3040, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwxg5"]
+size = Vector2(46, 711)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1137h"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0.25, 1, 1)
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 2000, 0)
+scale_min = 0.0
+scale_max = 5.8799996
+color = Color(1, 1, 1, 0.24313726)
+
+[node name="Pueblo" type="Node2D"]
+position = Vector2(376, -168)
+script = ExtResource("1_rnes4")
+
+[node name="Suelo" type="ColorRect" parent="."]
+offset_left = -2212.0
+offset_top = 725.0
+offset_right = 836.0
+offset_bottom = 930.0
+scale = Vector2(1.7999995, 1)
+color = Color(0.37892416, 0.32476085, 0.16728255, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Suelo"]
+position = Vector2(225, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo/StaticBody2D"]
+position = Vector2(1294, -96)
+shape = SubResource("RectangleShape2D_0lbbo")
+
+[node name="Ambiente" type="ColorRect" parent="."]
+offset_top = 97.0
+offset_right = 40.0
+offset_bottom = 137.0
+color = Color(0, 0, 0, 0)
+
+[node name="CasaFinal" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(2289, 709)
+
+[node name="Casa6" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(2138, 709)
+dialogo_hombre = Array[String](["Anoche me paso algo raro...", "Que sucedio...?? Cuentame", "Por la noche quise ir al baño, pero vi a Don Eugenio hacer algo raro", "Raro como que...??", "No importa, lo hablaremos despues...", "No me siento muy bien... Me voy a casa...", "Está bien"])
+nombres_dialogo = Array[String](["Maria", "Eva", "Maria", "Eva", "Maria", "Maria", "Eva"])
+retratos_dialogo = Array[String](["res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png"])
+
+[node name="Casa5" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(1478, 709)
+
+[node name="Llama" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(-522, 709)
+dialogo_hombre = Array[String](["......"])
+nombres_dialogo = Array[String](["Ignacio (llama)"])
+retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png"])
+
+[node name="Casa4" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(375, 709)
+dialogo_hombre = Array[String](["Buenas tardes!! Puedo hacerle unas preguntas?? ", "Por que se vienen a meter aqui!!", "No tienen nada mejor que hacer!!", "Disculpe??", "Ya me escuchaste, andate!!!", "Que grosera..."])
+nombres_dialogo = Array[String](["Eva", "Bartolina", "Bartolina", "Eva", "Bartolina", "Eva"])
+retratos_dialogo = Array[String](["res://Assets/Retratos/eva.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/eva.png"])
+
+[node name="Casa3" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(-158, 709)
+
+[node name="Casa2" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(-1220, 661)
+dialogo_hombre = Array[String](["*Pisadas*", "???", "Disculpe, escuche lo que dijeron...", "Sabes algo de la leyenda??", "Del... Qatiqati verdad...??", "Si, puedes contarme??", "Es una cabeza que da mucho miedo...", "Dicen que sale cuando no comes... O cuando te desean el mal...", "Eso me ayuda mucho con mi investigación, gracias!!!", "Ten cuidado...", "Creo que es muy tarde... Deberia irme a casa..."])
+nombres_dialogo = Array[String](["???", "Eva", "Bryan", "Eva", "Bryan", "Eva", "Bryan", "Bryan", "Eva", "Bryan", "Eva"])
+retratos_dialogo = Array[String](["res://Assets/Retratos/??.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png"])
+
+[node name="Casa1" parent="." instance=ExtResource("4_72lcd")]
+position = Vector2(-963, 709)
+dialogo_hombre = Array[String](["estito no podias", "¿Estás sola? Está muy tarde para andar caminando.", "¿Dijiste que buscas a tu amiga?...", "Sí, la vi. Pasó corriendo por aquí, estaba mojada por la lluvia.", "Si quieres, puedes entrar. Tal vez siga adentro... ven."])
+retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/hombre_1.png", "res://Assets/Retratos/hombre_1.png"])
+
+[node name="UI_DialogoVN" parent="." instance=ExtResource("5_dhnbi")]
+
+[node name="Limite" type="ColorRect" parent="."]
+offset_left = -1582.0
+offset_top = 22.0
+offset_right = -1542.0
+offset_bottom = 720.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite/StaticBody2D"]
+position = Vector2(16, 347)
+shape = SubResource("RectangleShape2D_nwxg5")
+
+[node name="Limite" type="ColorRect" parent="Limite"]
+layout_mode = 0
+offset_left = 4023.0
+offset_top = 22.0
+offset_right = 4063.0
+offset_bottom = 720.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limite/Limite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite/Limite/StaticBody2D"]
+position = Vector2(16, 347)
+shape = SubResource("RectangleShape2D_nwxg5")
+
+[node name="Lluvia" type="GPUParticles2D" parent="."]
+z_index = 2
+position = Vector2(330, 72.99997)
+scale = Vector2(8920.979, 23.50786)
+amount = 6000
+lifetime = 5.0
+preprocess = 2.0
+process_material = SubResource("ParticleProcessMaterial_1137h")
+
+[node name="SonidoAmbiente" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fwjxe")
+autoplay = true
+
+[node name="Fondofinal2" type="Sprite2D" parent="."]
+position = Vector2(399, 476.99997)
+scale = Vector2(2.1270678, 2.823662)
+texture = ExtResource("7_mlh7n")
+
+[node name="Jugador" parent="." instance=ExtResource("2_8x0ke")]
+position = Vector2(2387, 200)
+scale = Vector2(-1, 1)

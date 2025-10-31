@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://g5px5q2f88aq"]
+[gd_scene load_steps=11 format=3 uid="uid://c5c4ywdxeddy0"]
 
-[ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_0lbbo"]
-[ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="2_nwxg5"]
-[ext_resource type="PackedScene" uid="uid://bwqlsmvr0r11k" path="res://Escenas/2d/Subscenes/amiga.tscn" id="3_1137h"]
-[ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="4_ulgor"]
-[ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="5_4vkk5"]
-[ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="6_8b72m"]
-[ext_resource type="Texture2D" uid="uid://b0dxg111b4v2j" path="res://Assets/Texturas/SpriteFondoPueblo/fondofinal2.png" id="7_n6nbi"]
+[ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_gqqo6"]
+[ext_resource type="PackedScene" uid="uid://bwqlsmvr0r11k" path="res://Escenas/2d/Subscenes/amiga.tscn" id="2_ecjsk"]
+[ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="3_mt0o6"]
+[ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="4_fq26x"]
+[ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="5_j1tnq"]
+[ext_resource type="Texture2D" uid="uid://b0dxg111b4v2j" path="res://Assets/Texturas/SpriteFondoPueblo/fondofinal2.png" id="6_jyn0s"]
+[ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="7_p845y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lbbo"]
 size = Vector2(3040, 212)
@@ -29,7 +29,7 @@ color = Color(1, 1, 1, 0.24313726)
 
 [node name="Pueblo" type="Node2D"]
 position = Vector2(376, -168)
-script = ExtResource("1_0lbbo")
+script = ExtResource("1_gqqo6")
 
 [node name="Suelo" type="ColorRect" parent="."]
 offset_left = -2212.0
@@ -46,11 +46,7 @@ position = Vector2(225, 195)
 position = Vector2(1294, -96)
 shape = SubResource("RectangleShape2D_0lbbo")
 
-[node name="Jugador" parent="." instance=ExtResource("2_nwxg5")]
-z_index = 1
-position = Vector2(-1582, 209)
-
-[node name="Amiga" parent="." instance=ExtResource("3_1137h")]
+[node name="Amiga" parent="." instance=ExtResource("2_ecjsk")]
 z_index = 1
 position = Vector2(-1441, 252)
 
@@ -60,41 +56,40 @@ offset_right = 40.0
 offset_bottom = 137.0
 color = Color(0, 0, 0, 0)
 
-[node name="CasaFinal" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(2023, 709)
+[node name="CasaFinal" parent="." instance=ExtResource("3_mt0o6")]
+position = Vector2(2217, 709)
 
-[node name="Casa6" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(2241, 709)
-dialogo_hombre = Array[String](["Que bueno que llegaron", "Gracias por recibirnos en su casa!!", "Cualquier cosa por ayudarlas", "Gracias, solo seran 3 dias"])
-nombres_dialogo = Array[String](["Eugenio", "Maria", "Eugenio", "Eva"])
-retratos_dialogo = Array[String](["res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/eva.png"])
+[node name="Casa6" parent="." instance=ExtResource("3_mt0o6")]
+position = Vector2(2000, 709)
+dialogo_hombre = Array[String](["..."])
+nombres_dialogo = Array[String](["???"])
+retratos_dialogo = Array[String](["res://Assets/Retratos/hombre_1.png"])
 
-[node name="Casa5" parent="." instance=ExtResource("4_ulgor")]
+[node name="Casa5" parent="." instance=ExtResource("3_mt0o6")]
 position = Vector2(1478, 709)
 
-[node name="Llama" parent="." instance=ExtResource("4_ulgor")]
+[node name="Llama" parent="." instance=ExtResource("3_mt0o6")]
 position = Vector2(-522, 709)
 dialogo_hombre = Array[String](["......"])
 nombres_dialogo = Array[String](["Ignacio (llama)"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png"])
 
-[node name="Casa4" parent="." instance=ExtResource("4_ulgor")]
+[node name="Casa4" parent="." instance=ExtResource("3_mt0o6")]
 position = Vector2(375, 709)
 
-[node name="Casa3" parent="." instance=ExtResource("4_ulgor")]
+[node name="Casa3" parent="." instance=ExtResource("3_mt0o6")]
 position = Vector2(-158, 709)
 
-[node name="Casa2" parent="." instance=ExtResource("4_ulgor")]
+[node name="Casa2" parent="." instance=ExtResource("3_mt0o6")]
 position = Vector2(-1178, 661)
 dialogo_hombre = Array[String](["Hola negro", "¿Estás sola? Está muy tarde para andar caminando.", "¿Dijiste que buscas a tu amiga?...", "Sí, la vi. Pasó corriendo por aquí, estaba mojada por la lluvia.", "Si quieres, puedes entrar. Tal vez siga adentro... ven."])
 
-[node name="Casa1" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(108, 709)
-dialogo_hombre = Array[String](["No puedo creer que nos hayan mandado a hacer esta tarea", "Si, la verdad da flojera venir hasta aqui solo por una leyenda", "Mejor acabemos rapido con la investigación para irnos a casa", "Si, vamos..."])
-nombres_dialogo = Array[String](["Maria", "Eva", "Maria", "Eva"])
-retratos_dialogo = Array[String](["res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png"])
+[node name="Casa1" parent="." instance=ExtResource("3_mt0o6")]
+position = Vector2(-963, 709)
+dialogo_hombre = Array[String](["estito no podias", "¿Estás sola? Está muy tarde para andar caminando.", "¿Dijiste que buscas a tu amiga?...", "Sí, la vi. Pasó corriendo por aquí, estaba mojada por la lluvia.", "Si quieres, puedes entrar. Tal vez siga adentro... ven."])
+retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/hombre_1.png", "res://Assets/Retratos/hombre_1.png"])
 
-[node name="UI_DialogoVN" parent="." instance=ExtResource("5_4vkk5")]
+[node name="UI_DialogoVN" parent="." instance=ExtResource("4_fq26x")]
 
 [node name="Limite" type="ColorRect" parent="."]
 offset_left = -1582.0
@@ -131,10 +126,13 @@ preprocess = 2.0
 process_material = SubResource("ParticleProcessMaterial_1137h")
 
 [node name="SonidoAmbiente" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_8b72m")
+stream = ExtResource("5_j1tnq")
 autoplay = true
 
 [node name="Fondofinal2" type="Sprite2D" parent="."]
 position = Vector2(399, 476.99997)
 scale = Vector2(2.1270678, 2.823662)
-texture = ExtResource("7_n6nbi")
+texture = ExtResource("6_jyn0s")
+
+[node name="Jugador" parent="." instance=ExtResource("7_p845y")]
+position = Vector2(1625, 200)
