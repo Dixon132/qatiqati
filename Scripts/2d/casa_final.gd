@@ -17,9 +17,9 @@ extends Node2D
 ]
 
 @export var retratos_dialogo: Array[String] = [
-	"res://Assets/Retratos/hombre_1.png",
-	"res://Assets/Retratos/hombre_serio.png",
-	"res://Assets/Retratos/hombre_serio.png",
+	"res://Assets/Retratos/eva.png",
+	"res://Assets/Retratos/abuelo.png",
+	"res://Assets/Retratos/chola1.png",
 	"res://Assets/Retratos/hombre_1.png",
 	"res://Assets/Retratos/hombre_1.png"
 ]

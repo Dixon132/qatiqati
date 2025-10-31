@@ -3,14 +3,13 @@
 [node name="UI_DialogVN" type="CanvasLayer"]
 
 [node name="Portrait" type="Sprite2D" parent="."]
-position = Vector2(50, 458)
+position = Vector2(222, 387)
 
 [node name="Nombre" type="Label" parent="."]
 offset_left = 250.0
 offset_top = 458.0
 offset_right = 290.0
 offset_bottom = 481.0
-text = "e"
 
 [node name="Texto" type="Label" parent="."]
 offset_left = 250.0
@@ -22,8 +21,8 @@ offset_bottom = 533.0
 anchors_preset = -1
 anchor_top = -0.049000002
 anchor_bottom = -0.049000002
-offset_left = -272.0
-offset_top = 95.752
-offset_right = 1648.0
-offset_bottom = 295.752
-color = Color(0.02, 0.02, 0.02, 0.23921569)
+offset_left = -146.0
+offset_top = 63.752
+offset_right = 1774.0
+offset_bottom = 263.752
+color = Color(0.019607844, 0.019607844, 0.019607844, 0)
