@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://2ik32j6jmjoi" path="res://Assets/Texturas/SpritesPersonas/Eva/personajegamejam4.png" id="6_c8kiy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irf0q"]
-size = Vector2(57.999977, 107)
+size = Vector2(40, 72)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i6te2"]
 animations = [{
@@ -34,7 +34,7 @@ animations = [{
 script = ExtResource("1_n7akb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(43.00001, 462.5)
+position = Vector2(34.000023, 480)
 shape = SubResource("RectangleShape2D_irf0q")
 debug_color = Color(0.8979274, 0.09034536, 0.7348843, 0.41960785)
 
@@ -49,9 +49,8 @@ stream = ExtResource("3_nmymh")
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(240, 372)
-scale = Vector2(2.0400004, 1.88)
+position = Vector2(156, 421)
+scale = Vector2(1.2800003, 1.24)
 sprite_frames = SubResource("SpriteFrames_i6te2")
 animation = &"Idle"
-autoplay = "Idle"
-frame_progress = 0.15135273
+frame_progress = 0.81062096

@@ -48,11 +48,11 @@ shape = SubResource("RectangleShape2D_p0e3k")
 
 [node name="Jugador" parent="." instance=ExtResource("1_7q4ex")]
 z_index = 1
-position = Vector2(-226, 180)
+position = Vector2(-1441, 180)
 
 [node name="Amiga" parent="." instance=ExtResource("2_irf0q")]
 z_index = 1
-position = Vector2(-221, 236)
+position = Vector2(-1441, 232)
 
 [node name="Ambiente" type="ColorRect" parent="."]
 offset_top = 97.0
@@ -92,9 +92,9 @@ dialogo_hombre = Array[String](["estito no podias", "¿Estás sola? Está muy ta
 [node name="UI_DialogoVN" parent="." instance=ExtResource("8_1m1tm")]
 
 [node name="Limite" type="ColorRect" parent="."]
-offset_left = -1481.0
+offset_left = -1582.0
 offset_top = 22.0
-offset_right = -1441.0
+offset_right = -1542.0
 offset_bottom = 720.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Limite"]
