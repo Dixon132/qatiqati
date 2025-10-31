@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://g5px5q2f88aq"]
+[gd_scene load_steps=13 format=3 uid="uid://g5px5q2f88aq"]
 
 [ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_2xdta"]
 [ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="1_7q4ex"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bke5tfsbryouy" path="res://Escenas/2d/Subscenes/ui.tscn" id="4_liocs"]
 [ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="6_0t2hh"]
 [ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="8_1m1tm"]
+[ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="9_h620h"]
 [ext_resource type="Texture2D" uid="uid://ca5v6wenu82r7" path="res://Assets/Texturas/SpriteFondoPueblo/fondo_pueblo.png" id="9_p0e3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e3k"]
@@ -21,8 +22,9 @@ emission_shape = 3
 emission_box_extents = Vector3(0.25, 1, 1)
 angle_min = 1.0728835e-05
 angle_max = 1.0728835e-05
-spread = 180.0
-gravity = Vector3(0, 900, 0)
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 2000, 0)
 scale_min = 0.0
 scale_max = 5.8799996
 
@@ -115,7 +117,11 @@ texture = ExtResource("9_p0e3k")
 z_index = 2
 position = Vector2(330, 72.99997)
 scale = Vector2(8920.979, 23.50786)
-amount = 500
+amount = 6000
 lifetime = 5.0
 preprocess = 2.0
 process_material = SubResource("ParticleProcessMaterial_7ulm5")
+
+[node name="SonidoAmbiente" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_h620h")
+autoplay = true
