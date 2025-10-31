@@ -34,7 +34,7 @@ animations = [{
 script = ExtResource("1_n7akb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(43, 456)
+position = Vector2(184, 456.00003)
 scale = Vector2(1, 1.2)
 shape = SubResource("RectangleShape2D_irf0q")
 debug_color = Color(0.8979274, 0.09034536, 0.7348843, 0.41960785)
@@ -50,8 +50,8 @@ stream = ExtResource("3_nmymh")
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(274.00003, 332)
-scale = Vector2(2.4000015, 2.4399989)
+position = Vector2(412, 332)
+scale = Vector2(2.4, 2.44)
 sprite_frames = SubResource("SpriteFrames_i6te2")
 animation = &"Idle"
 autoplay = "Idle"

@@ -1,19 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwqlsmvr0r11k"]
+[gd_scene load_steps=8 format=3 uid="uid://bwqlsmvr0r11k"]
 
 [ext_resource type="Script" uid="uid://u2gmtj7g6g31" path="res://Scripts/2d/amiga.gd" id="1_colvh"]
-[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="2_5l3wo"]
+[ext_resource type="Texture2D" uid="uid://b6qh4g5y6l300" path="res://Assets/Texturas/SpritesPersonas/Amiga/amiga1png.png" id="2_m8lql"]
+[ext_resource type="Texture2D" uid="uid://ciq66e6mhient" path="res://Assets/Texturas/SpritesPersonas/Amiga/amiga2png.png" id="3_pecqk"]
+[ext_resource type="Texture2D" uid="uid://cw1hn8r03qg4r" path="res://Assets/Texturas/SpritesPersonas/Amiga/amiga3png.png" id="4_0pgll"]
+[ext_resource type="Texture2D" uid="uid://d27vw3cgwiurq" path="res://Assets/Texturas/SpritesPersonas/Amiga/amiga4png.png" id="5_g3wa1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1ots"]
-size = Vector2(34, 42)
+size = Vector2(33.02114, 44.459038)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkebs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m8lql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pecqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0pgll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g3wa1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Amiga" type="CharacterBody2D"]
 script = ExtResource("1_colvh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-56, 452)
-scale = Vector2(0.25, 0.3125)
-texture = ExtResource("2_5l3wo")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-57, 451)
+position = Vector2(-59, 412)
+scale = Vector2(1.8920301, 2.9105453)
 shape = SubResource("RectangleShape2D_m1ots")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(64, 397.00003)
+scale = Vector2(2.3411412, 2.5376468)
+sprite_frames = SubResource("SpriteFrames_rkebs")
+autoplay = "default"
+frame_progress = 0.4221397
