@@ -47,8 +47,3 @@ func _process(delta):
 		dialogo_terminado = true
 		if label_interactuar:
 			label_interactuar.visible = false  # ocultar cuando empieza el diálogo
-
-# Este lo llamará Pueblo.gd cuando termine el diálogo VN
-func abrir_puerta():
-	print("La puerta de la casa final se ha abierto...")
-	get_tree().change_scene_to_file("res://Scenes/CasaInterior3D.tscn")

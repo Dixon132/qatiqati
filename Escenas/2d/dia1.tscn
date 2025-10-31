@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://g5px5q2f88aq"]
+[gd_scene load_steps=12 format=3 uid="uid://g5px5q2f88aq"]
 
 [ext_resource type="Script" uid="uid://cj8jej01vh0gt" path="res://Scripts/2d/pueblo.gd" id="1_0lbbo"]
 [ext_resource type="PackedScene" uid="uid://brgq3ll5cejcm" path="res://Escenas/2d/Subscenes/jugador.tscn" id="2_nwxg5"]
 [ext_resource type="PackedScene" uid="uid://bwqlsmvr0r11k" path="res://Escenas/2d/Subscenes/amiga.tscn" id="3_1137h"]
 [ext_resource type="PackedScene" uid="uid://06ycm4wh8t75" path="res://Escenas/2d/Subscenes/casa_final.tscn" id="4_ulgor"]
 [ext_resource type="PackedScene" uid="uid://h4p0ot67360w" path="res://Escenas/2d/Subscenes/ui_dialog_vn.tscn" id="5_4vkk5"]
+[ext_resource type="Script" uid="uid://bp14jpqim2yaf" path="res://Escenas/2d/Subscenes/casadia1.gd" id="5_nwxg5"]
 [ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="6_8b72m"]
 [ext_resource type="Texture2D" uid="uid://b0dxg111b4v2j" path="res://Assets/Texturas/SpriteFondoPueblo/fondofinal2.png" id="7_n6nbi"]
 
@@ -62,7 +63,8 @@ color = Color(0, 0, 0, 0)
 
 [node name="Casa6" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(2241, 709)
-dialogo_hombre = Array[String](["Que bueno que llegaron", "Gracias por recibirnos en su casa!!", "Cualquier cosa por ayudarlas", "Gracias, solo seran 3 dias"])
+script = ExtResource("5_nwxg5")
+dialogo_hombre = Array[String](["Que bueno que llegaron", "Gracias por recibirnos en su casa!!", "Cualquier cosa por ayudarlas", "Gracias, solo seran 3 dias"])
 nombres_dialogo = Array[String](["Eugenio", "Maria", "Eugenio", "Eva"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/eva.png"])
 

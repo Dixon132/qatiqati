@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://h4p0ot67360w"]
+[gd_scene load_steps=3 format=3 uid="uid://h4p0ot67360w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2e751"]
+font_size = 26
 
 [sub_resource type="LabelSettings" id="LabelSettings_tauto"]
-font_size = 20
+font_size = 22
 
 [node name="UI_DialogVN" type="CanvasLayer"]
 
@@ -13,6 +16,7 @@ offset_left = 250.0
 offset_top = 424.0
 offset_right = 290.0
 offset_bottom = 447.0
+label_settings = SubResource("LabelSettings_2e751")
 
 [node name="Texto" type="Label" parent="."]
 offset_left = 250.0
