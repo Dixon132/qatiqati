@@ -23,5 +23,5 @@ func _on_body_exited(body: Node) -> void:
 		body.call_deferred("set_interactable", null)
 		print('fuera')
 
-func interact(player: Node) -> void:
+func interact(player: Node) -> void:	
 	print("✅ Interacción ejecutada en:", name)
