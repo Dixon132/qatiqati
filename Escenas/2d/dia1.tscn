@@ -60,29 +60,17 @@ offset_right = 40.0
 offset_bottom = 137.0
 color = Color(0, 0, 0, 0)
 
-[node name="CasaFinal" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(2023, 709)
-
 [node name="Casa6" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(2241, 709)
 dialogo_hombre = Array[String](["Que bueno que llegaron", "Gracias por recibirnos en su casa!!", "Cualquier cosa por ayudarlas", "Gracias, solo seran 3 dias"])
 nombres_dialogo = Array[String](["Eugenio", "Maria", "Eugenio", "Eva"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/eva.png"])
 
-[node name="Casa5" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(1478, 709)
-
 [node name="Llama" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(-522, 709)
-dialogo_hombre = Array[String](["......"])
-nombres_dialogo = Array[String](["Ignacio (llama)"])
+dialogo_hombre = Array[String](["..."])
+nombres_dialogo = Array[String](["Ignacio la llama"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png"])
-
-[node name="Casa4" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(375, 709)
-
-[node name="Casa3" parent="." instance=ExtResource("4_ulgor")]
-position = Vector2(-158, 709)
 
 [node name="Casa1" parent="." instance=ExtResource("4_ulgor")]
 position = Vector2(108, 709)

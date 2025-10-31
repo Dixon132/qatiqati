@@ -51,22 +51,16 @@ offset_right = 40.0
 offset_bottom = 137.0
 color = Color(0, 0, 0, 0)
 
-[node name="CasaFinal" parent="." instance=ExtResource("4_72lcd")]
-position = Vector2(2289, 709)
-
 [node name="Casa6" parent="." instance=ExtResource("4_72lcd")]
 position = Vector2(2138, 709)
 dialogo_hombre = Array[String](["Anoche me paso algo raro...", "Que sucedio...?? Cuentame", "Por la noche quise ir al baño, pero vi a Don Eugenio hacer algo raro", "Raro como que...??", "No importa, lo hablaremos despues...", "No me siento muy bien... Me voy a casa...", "Está bien"])
 nombres_dialogo = Array[String](["Maria", "Eva", "Maria", "Eva", "Maria", "Maria", "Eva"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/maria.png", "res://Assets/Retratos/eva.png"])
 
-[node name="Casa5" parent="." instance=ExtResource("4_72lcd")]
-position = Vector2(1478, 709)
-
 [node name="Llama" parent="." instance=ExtResource("4_72lcd")]
 position = Vector2(-522, 709)
-dialogo_hombre = Array[String](["......"])
-nombres_dialogo = Array[String](["Ignacio (llama)"])
+dialogo_hombre = Array[String](["..."])
+nombres_dialogo = Array[String](["Ignacio la llama"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png"])
 
 [node name="Casa4" parent="." instance=ExtResource("4_72lcd")]
@@ -75,19 +69,11 @@ dialogo_hombre = Array[String](["Buenas tardes!! Puedo hacerle unas preguntas?? 
 nombres_dialogo = Array[String](["Eva", "Bartolina", "Bartolina", "Eva", "Bartolina", "Eva"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/eva.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/eva.png"])
 
-[node name="Casa3" parent="." instance=ExtResource("4_72lcd")]
-position = Vector2(-158, 709)
-
 [node name="Casa2" parent="." instance=ExtResource("4_72lcd")]
 position = Vector2(-1220, 661)
 dialogo_hombre = Array[String](["*Pisadas*", "???", "Disculpe, escuche lo que dijeron...", "Sabes algo de la leyenda??", "Del... Qatiqati verdad...??", "Si, puedes contarme??", "Es una cabeza que da mucho miedo...", "Dicen que sale cuando no comes... O cuando te desean el mal...", "Eso me ayuda mucho con mi investigación, gracias!!!", "Ten cuidado...", "Creo que es muy tarde... Deberia irme a casa..."])
 nombres_dialogo = Array[String](["???", "Eva", "Bryan", "Eva", "Bryan", "Eva", "Bryan", "Bryan", "Eva", "Bryan", "Eva"])
 retratos_dialogo = Array[String](["res://Assets/Retratos/??.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png", "res://Assets/Retratos/niñoAsustado.png", "res://Assets/Retratos/eva.png"])
-
-[node name="Casa1" parent="." instance=ExtResource("4_72lcd")]
-position = Vector2(-963, 709)
-dialogo_hombre = Array[String](["estito no podias", "¿Estás sola? Está muy tarde para andar caminando.", "¿Dijiste que buscas a tu amiga?...", "Sí, la vi. Pasó corriendo por aquí, estaba mojada por la lluvia.", "Si quieres, puedes entrar. Tal vez siga adentro... ven."])
-retratos_dialogo = Array[String](["res://Assets/Retratos/llama.png", "res://Assets/Retratos/abuelo.png", "res://Assets/Retratos/chola1.png", "res://Assets/Retratos/hombre_1.png", "res://Assets/Retratos/hombre_1.png"])
 
 [node name="UI_DialogoVN" parent="." instance=ExtResource("5_dhnbi")]
 
