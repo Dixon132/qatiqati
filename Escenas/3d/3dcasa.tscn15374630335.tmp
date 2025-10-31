@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bloajy60y5627"]
+[gd_scene load_steps=15 format=3 uid="uid://bloajy60y5627"]
 
 [ext_resource type="Script" uid="uid://csl1aiv7xn6xu" path="res://Scripts/3d/player.gd" id="1_tl14i"]
 [ext_resource type="Script" uid="uid://csrb62uvc7p1c" path="res://Scripts/3d/Interacciones/InteractionBase.gd" id="2_lvx33"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://de06y12qvmxc" path="res://Scripts/3d/UI/InteractPromp.gd" id="4_mdtle"]
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="4_prcyg"]
 [ext_resource type="Texture2D" uid="uid://dtpqnnyhb55ym" path="res://Assets/Texturas/SpritesPersonas/spritemujer.png" id="5_1yqe0"]
-[ext_resource type="Script" uid="uid://c12a066r2sulw" path="res://Scripts/3d/UI/InventoryProgress.gd" id="8_prcyg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lvx33"]
 
@@ -62,8 +61,7 @@ mesh = SubResource("CapsuleMesh_lvx33")
 skeleton = NodePath("../MeshInstance3D2")
 script = ExtResource("3_lmcgd")
 item_name = "LLAVE"
-item_type = "rama"
-description_lines = Array[String](["MIRA BRO", "WAAA", "UNA LLAVE"])
+description_lines = Array[String](["ASDASD", "ASD", "ASDASD", "DASDSA"])
 pickup_item = true
 item_texture = ExtResource("4_prcyg")
 inspect_texture = ExtResource("5_1yqe0")
@@ -136,30 +134,3 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "E-INTERACTUAR"
-
-[node name="InventoryProgress" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -226.0
-offset_bottom = 250.0
-grow_horizontal = 0
-script = ExtResource("8_prcyg")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/InventoryProgress"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="LabelBranches" type="Label" parent="UI/InventoryProgress/VBoxContainer"]
-layout_mode = 2
-
-[node name="LabelPlants" type="Label" parent="UI/InventoryProgress/VBoxContainer"]
-layout_mode = 2
-
-[node name="LabelBag" type="Label" parent="UI/InventoryProgress/VBoxContainer"]
-layout_mode = 2
