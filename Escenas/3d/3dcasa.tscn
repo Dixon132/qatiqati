@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bloajy60y5627"]
+[gd_scene load_steps=15 format=3 uid="uid://bloajy60y5627"]
 
 [ext_resource type="Script" uid="uid://csl1aiv7xn6xu" path="res://Scripts/3d/player.gd" id="1_tl14i"]
 [ext_resource type="Script" uid="uid://dwtmcqrm8vanl" path="res://Scripts/3d/UI/ObjectViewer3D.gd" id="3_7kar2"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://de06y12qvmxc" path="res://Scripts/3d/UI/InteractPromp.gd" id="4_mdtle"]
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="4_prcyg"]
 [ext_resource type="Texture2D" uid="uid://dtpqnnyhb55ym" path="res://Assets/Texturas/SpritesPersonas/spritemujer.png" id="5_1yqe0"]
+[ext_resource type="Script" uid="uid://dgbhqxiewf08o" path="res://Scripts/3d/cabeza/JumpScareOverlay.gd" id="8_1yqe0"]
 [ext_resource type="Script" uid="uid://c12a066r2sulw" path="res://Scripts/3d/UI/InventoryProgress.gd" id="8_prcyg"]
+[ext_resource type="PackedScene" uid="uid://kbj57vwspffw" path="res://Escenas/3d/Subescenas/head_enemy.tscn" id="9_02lv8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lvx33"]
 
@@ -148,3 +150,26 @@ layout_mode = 2
 
 [node name="LabelBag" type="Label" parent="UI/InventoryProgress/VBoxContainer"]
 layout_mode = 2
+
+[node name="JumpScareOverlay" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_1yqe0")
+
+[node name="TextureRect" type="TextureRect" parent="UI/JumpScareOverlay"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI/JumpScareOverlay"]
+
+[node name="HeadManager" parent="." instance=ExtResource("9_02lv8")]
+speed = null
+active_time = null
+proximity_radius = null
+
+[node name="HeadSpawner" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="HeadSpawner"]

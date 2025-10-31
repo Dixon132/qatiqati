@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://kbj57vwspffw"]
+
+[ext_resource type="Script" uid="uid://becanldqjbvq0" path="res://Scripts/3d/cabeza/HeadEnemy.gd" id="1_6wxmd"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6wxmd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wlm8g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rstbh"]
+
+[node name="HeadEnemy" type="Node3D"]
+script = ExtResource("1_6wxmd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_6wxmd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_wlm8g")
+
+[node name="proximity_area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="proximity_area"]
+shape = SubResource("BoxShape3D_rstbh")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
