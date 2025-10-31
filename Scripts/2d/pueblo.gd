@@ -42,13 +42,26 @@ var casa_actual = null
 # ================================================================
 # 📜 SISTEMA DE DIÁLOGOS
 # ================================================================
-func start_dialog(lines: Array[String], casa_origen = null) -> void:
-	dialog_lines = lines
+func start_dialog(lines: Array[String], casa_origen = null, nombres: Array[String] = [], retratos: Array[String] = []) -> void:
 	casa_actual = casa_origen
-	current_line = 0
-	in_dialog = true
-	dialog_box.visible = true
-	show_line()
+
+	# Si tiene retratos o nombres, usamos la interfaz VN
+	if retratos.size() > 0 or nombres.size() > 0:
+		vn_activo = true
+		vn_dialogo = lines
+		vn_nombres = nombres
+		vn_retratos = retratos
+		vn_linea = 0
+		vn_casa_origen = casa_origen
+		vn_ui.visible = true
+		mostrar_vn_linea()
+	else:
+		# Diálogo clásico (sin retratos)
+		dialog_lines = lines
+		current_line = 0
+		in_dialog = true
+		dialog_box.visible = true
+		show_line()
 
 func show_line() -> void:
 	if current_line >= 0 and current_line < dialog_lines.size():

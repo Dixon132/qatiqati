@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://brgq3ll5cejcm"]
+[gd_scene load_steps=5 format=3 uid="uid://brgq3ll5cejcm"]
 
 [ext_resource type="Script" uid="uid://blj3skllr7jsg" path="res://Scripts/2d/jugador.gd" id="1_n7akb"]
 [ext_resource type="Texture2D" uid="uid://dtpqnnyhb55ym" path="res://Assets/Texturas/SpritesPersonas/spritemujer.png" id="2_gm73r"]
+[ext_resource type="AudioStream" uid="uid://xueq5nandth" path="res://Assets/Audio/lluvia-relajante-rain-2-210937.mp3" id="3_nmymh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irf0q"]
 size = Vector2(40, 72)
@@ -23,3 +24,8 @@ debug_color = Color(0.8979274, 0.09034536, 0.7348843, 0.41960785)
 position = Vector2(424, 328)
 limit_left = -1000
 limit_right = 2800
+
+[node name="SonidoAmbiente" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(140, 73)
+stream = ExtResource("3_nmymh")
+autoplay = true

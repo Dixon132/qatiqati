@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfcxgejwuxnnp"]
 
-[ext_resource type="Script" uid="uid://jvd0c7j761s2" path="res://Scripts/2d/casa_1.gd" id="1_onmj4"]
+[ext_resource type="Script" uid="uid://lpeajxwunl6a" path="res://Scripts/2d/casa_final.gd" id="1_4jdi5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xip1y"]
 size = Vector2(32, 64)
 
 [node name="Casa1" type="Node2D"]
-script = ExtResource("1_onmj4")
+script = ExtResource("1_4jdi5")
 
 [node name="Diseño" type="ColorRect" parent="."]
 offset_left = -64.0
@@ -19,6 +19,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(0, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+scale = Vector2(1.5200007, 1)
 shape = SubResource("RectangleShape2D_xip1y")
 
 [node name="Luz" type="ColorRect" parent="."]
